@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 body {
   font-family: "Poppins", sans-serif;
   margin: 0px;
 }
-/* header-part */
+/* -------------
+header-part 
+-----------*/
 nav {
   display: flex;
   justify-content: space-between;
@@ -28,7 +31,9 @@ main {
   flex-direction: column;
   align-items: center;
 }
-/* first-part */
+/*------------
+ first-part
+------------ */
 .first-width {
   width: 40%;
   float: left;
@@ -58,7 +63,9 @@ h1 {
   font-size: 50px;
   font-weight: 900;
 }
-/* adding animation part */
+/* -----------
+ adding animation part
+ ----------- */
 .animation {
   background-color: white;
   position: relative;
@@ -74,7 +81,9 @@ h1 {
     left: 50px;
   }
 }
-/* logo-part */
+/* ----------
+logo-part 
+----------*/
 .all-logo {
   width: 1110px;
   height: 110px;
@@ -86,11 +95,10 @@ h1 {
   grid-row-gap: 61px;
   margin: 100px;
 }
-/* photo-gallery */
+/*--------------
+ photo-gallery 
+ -------------*/
 .photo-gallery {
-  /* background: #ffffff;
-  width: 1047px;
-  height: 1662px; */
   padding: 30px;
   margin-top: 21px;
   border-radius: 5px;
@@ -116,7 +124,10 @@ h1 {
   border-radius: 5px;
   padding: 15px;
 }
-
+.photo-detail {
+  padding-left: 14px;
+  font-size: 12px;
+}
 .fa-star {
   font-size: 12px;
 }
@@ -126,9 +137,7 @@ h1 {
 .fa-star.empty {
   color: #aeaeae;
 }
-.photo-detail {
-  padding-left: 14px;
-}
+
 #foot {
   position: relative;
   bottom: 0;
@@ -138,7 +147,9 @@ h1 {
   color: #e02c6dde;
 }
 
-/* bottom-part */
+/* --------
+ bottom-part 
+------------*/
 .second-width {
   width: 40%;
   float: left;
@@ -160,16 +171,22 @@ h1 {
 .p3-text {
   margin-top: 100px;
 }
-/* footer-part */
+/*-----------
+ footer-part 
+ -----------*/
 footer {
   padding: 100px 0;
   text-align: center;
   background-color: #0a0826;
   font-style: italic;
   color: white;
-  /* height: 200px; */
 }
-/* media query part  */
+/*-------------
+ media query part
+ -------------  */
+/* -----------
+for mobile deevece
+---------- */
 @media only screen and (max-width: 688px) {
   .container {
     width: 100%;
@@ -180,6 +197,30 @@ footer {
   .p3-text,
   footer {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .all-logo,
+  .photo-frame,
+  .top,
+  .photo-width,
+  #f1,
+  #s1,
+  .second-width {
+    flex-direction: column;
+  }
+}
+/*--------------
+ for tablet device 
+ ---------*/
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+  .container {
+    width: 50%;
+  }
+  .first-width,
+  .logos,
+  .photos,
+  .p3-text,
+  footer {
+    grid-template-columns: repeat(2, 1fr);
   }
   .all-logo,
   .photo-frame,
