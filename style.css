@@ -36,6 +36,9 @@ main {
   padding-left: 2%;
   margin-top: 5px;
 }
+.first-width img {
+  width: 100%;
+}
 .link-button {
   background-image: linear-gradient(to bottom, #ff589b 0%, #ff136f 100%);
   color: white;
@@ -50,9 +53,7 @@ main {
 #second {
   margin-top: 200px;
 }
-.first-width img {
-  width: 100%;
-}
+
 h1 {
   font-size: 50px;
   font-weight: 900;
@@ -86,10 +87,10 @@ h1 {
   margin: 100px;
 }
 /* photo-gallery */
-.container {
-  background: #ffffff;
+.photo-gallery {
+  /* background: #ffffff;
   width: 1047px;
-  height: 1662px;
+  height: 1662px; */
   padding: 30px;
   margin-top: 21px;
   border-radius: 5px;
@@ -138,6 +139,24 @@ h1 {
 }
 
 /* bottom-part */
+.second-width {
+  width: 40%;
+  float: left;
+  margin-left: 5%;
+  padding-left: 2%;
+  margin-top: 5px;
+}
+.second-width img {
+  width: 100%;
+}
+#f1 {
+  margin: 50px;
+  margin-left: 170px;
+}
+#s1 {
+  margin-left: 800px;
+  margin-top: -200px;
+}
 .p3-text {
   margin-top: 100px;
 }
@@ -148,5 +167,27 @@ footer {
   background-color: #0a0826;
   font-style: italic;
   color: white;
-  height: 200px;
+  /* height: 200px; */
+}
+/* media query part  */
+@media only screen and (max-width: 688px) {
+  .container {
+    width: 100%;
+  }
+  .first-width,
+  .logos,
+  .photos,
+  .p3-text,
+  footer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .all-logo,
+  .photo-frame,
+  .top,
+  .photo-width,
+  #f1,
+  #s1,
+  .second-width {
+    flex-direction: column;
+  }
 }
